@@ -1,0 +1,794 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head><base href="./"><script>
+(function () {
+  try {
+    // Keep the actual exported document address before restoring the captured
+    // route identity below. Root-absolute hash routers otherwise navigate to
+    // the static server root (/#/route) and discard the clone/project subpath.
+    var physicalDocumentPath = location.pathname;
+    var physicalDocumentSearch = location.search;
+    var physicalDocumentHash = location.hash;
+    // A generated HTML filename is a physical implementation detail, never a
+    // deployment directory. Remove it before deriving the hosting subpath.
+    var currentPath = location.pathname.replace(/\/index\.html(?=\/|$)/ig, '');
+    currentPath = currentPath.endsWith('/') ? currentPath : currentPath + '/';
+    var marker = "/license/view/01j5bs3egwdcmzccgpyxns8ytt/";
+    var markerIndex = currentPath.lastIndexOf(marker);
+    var deploymentBase = markerIndex >= 0 ? currentPath.slice(0, markerIndex) : '';
+    var deploymentRoot = (deploymentBase.replace(/\/+$/, '') || '') + '/';
+    window.__CLONED_DEPLOYMENT_BASE__ = deploymentBase;
+    
+    var base = document.querySelector('base');
+    if (base) base.setAttribute('href', deploymentRoot);
+    function rootHashTarget(value) {
+      if (typeof value !== 'string') return null;
+      try {
+        var parsed = new URL(value, location.href);
+        if (parsed.origin !== location.origin || parsed.pathname !== '/' || !/^#\//.test(parsed.hash)) return null;
+        return physicalDocumentPath + (parsed.search || physicalDocumentSearch) + parsed.hash;
+      } catch (_) { return null; }
+    }
+    function normalizeHistoryUrl(value) {
+      if (typeof value !== 'string') return value;
+      try {
+        var rootHash = rootHashTarget(value);
+        if (rootHash) return rootHash;
+        var parsed = new URL(value, location.href);
+        if (parsed.pathname !== physicalDocumentPath) parsed.pathname = parsed.pathname.replace(/\/index\.html(?=\/|$)/ig, '');
+        return parsed.pathname + parsed.search + parsed.hash;
+      } catch (_) { return value; }
+    }
+    function routeAllowed(value, context) {
+      var guard = window.__CLONED_ROUTE_GUARD__;
+      return !guard || typeof guard.allows !== 'function' || guard.allows(value, context);
+    }
+    var nativeHistory = {};
+    ['pushState', 'replaceState'].forEach(function (method) {
+      var original = history[method];
+      nativeHistory[method] = original;
+      history[method] = function (state, title, url) {
+        var normalized = normalizeHistoryUrl(url);
+        if (url != null && !routeAllowed(normalized)) return;
+        return original.call(history, state, title, normalized);
+      };
+    });
+    // The Navigation API is the only pre-commit browser hook that also covers
+    // location.href, location.assign(), and location.replace(). Anchors and
+    // History API calls remain covered by the fallbacks below.
+    if (window.navigation && window.navigation.addEventListener) {
+      window.navigation.addEventListener('navigate', function (event) {
+        var corrected = event.destination && rootHashTarget(event.destination.url);
+        if (!corrected || !event.cancelable) return;
+        event.preventDefault();
+        if (!routeAllowed(corrected, event)) return;
+        var oldUrl = location.href;
+        var method = event.navigationType === 'replace' ? 'replaceState' : 'pushState';
+        nativeHistory[method].call(history, null, document.title, corrected);
+        window.dispatchEvent(new HashChangeEvent('hashchange', { oldURL: oldUrl, newURL: location.href }));
+      });
+    }
+    document.addEventListener('click', function (event) {
+      if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      var anchor = event.target && event.target.closest && event.target.closest('a[href]');
+      if (!anchor || (anchor.target && anchor.target !== '_self') || anchor.hasAttribute('download')) return;
+      var corrected = rootHashTarget(anchor.getAttribute('href'));
+      if (!corrected) return;
+      event.preventDefault();
+      if (!routeAllowed(corrected)) return;
+      var oldUrl = location.href;
+      nativeHistory.pushState.call(history, null, document.title, corrected);
+      window.dispatchEvent(new HashChangeEvent('hashchange', { oldURL: oldUrl, newURL: location.href }));
+    }, true);
+    var capturedRoute = "/license/view/01j5bs3egwdcmzccgpyxns8ytt";
+    var capturedRootHash = false;
+    var targetRoute = capturedRootHash
+      ? physicalDocumentPath + ("" || physicalDocumentSearch) + (/^#\//.test(physicalDocumentHash) ? physicalDocumentHash : "")
+      : deploymentRoot + capturedRoute.replace(/^\/+/, '');
+    var targetIsPhysicalDocument = targetRoute.replace(/[?#].*$/, '') === physicalDocumentPath;
+    if (location.pathname + location.search + location.hash !== targetRoute) {
+      (capturedRootHash || targetIsPhysicalDocument ? nativeHistory.replaceState : history.replaceState).call(history, null, document.title, targetRoute);
+    }
+    
+  } catch (_) {}
+})();
+</script><script>
+(function () {
+  var resources = {"https://app.industry.sa/favicon.ico":"assets/favicon.ico","https://backoffice.industry.sa/images/mim-logo.png":"images/mim-logo.png","https://backoffice.industry.sa/images/vision-2030-top.png":"images/vision-2030-top.png","https://backoffice.industry.sa/build/assets/app-Dq9IadKQ.css":"css/build/assets/app-Dq9IadKQ.css","https://backoffice.industry.sa/images/senaei.jpg":"images/senaei.jpg","https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt":"license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html","https://app.industry.sa/":"index.html","https://backoffice.industry.sa/build/assets/pdf-arrow-DmuYqOWx.png":"images/build/assets/pdf-arrow-DmuYqOWx.png","https://backoffice.industry.sa/build/assets/shape_icon-Cj8PgXzG.png":"images/build/assets/shape_icon-Cj8PgXzG.png","https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot","https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot?":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE--6580abdf51554bc2.eot","https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2","https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff":"fonts/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff","https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf":"fonts/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf","https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg":"images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg","https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot","https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot?":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O--c871912b909960d4.eot","https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2","https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff","https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf","https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg":"images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg","https://backoffice.industry.sa/build/assets/LyonArabicText-Black-584mqkp0.woff2":"fonts/build/assets/LyonArabicText-Black-584mqkp0.woff2","https://backoffice.industry.sa/build/assets/LyonArabicText-Black-CapuXlqb.woff":"fonts/build/assets/LyonArabicText-Black-CapuXlqb.woff","https://backoffice.industry.sa/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2":"fonts/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2","https://backoffice.industry.sa/build/assets/LyonArabicText-Regular-BXA-EN7n.woff":"fonts/build/assets/LyonArabicText-Regular-BXA-EN7n.woff","https://backoffice.industry.sa/build/assets/LyonArabicText-Semibold-VXt817sT.woff2":"fonts/build/assets/LyonArabicText-Semibold-VXt817sT.woff2","https://backoffice.industry.sa/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff":"fonts/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff"};
+  var captchaPaths = {};
+  var basenameMatches = {"favicon.ico":"assets/favicon.ico","mim-logo.png":"images/mim-logo.png","vision-2030-top.png":"images/vision-2030-top.png","app-Dq9IadKQ.css":"css/build/assets/app-Dq9IadKQ.css","senaei.jpg":"images/senaei.jpg","01j5bs3egwdcmzccgpyxns8ytt":"license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html","pdf-arrow-DmuYqOWx.png":"images/build/assets/pdf-arrow-DmuYqOWx.png","shape_icon-Cj8PgXzG.png":"images/build/assets/shape_icon-Cj8PgXzG.png","67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot":null,"67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2","67c4778336d9edd226af9218351835bd-C-gDbbhV.woff":"fonts/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff","67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf":"fonts/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf","67c4778336d9edd226af9218351835bd-DzkNDvuI.svg":"images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg","02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot":null,"02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2","02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff","02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf","02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg":"images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg","LyonArabicText-Black-584mqkp0.woff2":"fonts/build/assets/LyonArabicText-Black-584mqkp0.woff2","LyonArabicText-Black-CapuXlqb.woff":"fonts/build/assets/LyonArabicText-Black-CapuXlqb.woff","LyonArabicText-Regular-Bz51kZSh.woff2":"fonts/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2","LyonArabicText-Regular-BXA-EN7n.woff":"fonts/build/assets/LyonArabicText-Regular-BXA-EN7n.woff","LyonArabicText-Semibold-VXt817sT.woff2":"fonts/build/assets/LyonArabicText-Semibold-VXt817sT.woff2","LyonArabicText-Semibold-Cj-eUayY.woff":"fonts/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff"};
+  var imageStemMatches = {"favicon":"assets/favicon.ico","mim-logo":"images/mim-logo.png","vision-2030-top":"images/vision-2030-top.png","senaei":"images/senaei.jpg","pdf-arrow-dmuyqowx":"images/build/assets/pdf-arrow-DmuYqOWx.png","shape_icon-cj8pgxzg":"images/build/assets/shape_icon-Cj8PgXzG.png","67c4778336d9edd226af9218351835bd-dzkndvui":"images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg","02f502e5eefeb353e5f83fc5045348dc-db369ymt":"images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg"};
+  var sourcePageUrl = "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt";
+
+  function normalizeAssetPath(value) {
+    if (typeof value !== 'string' || !value) return value;
+    var raw = value.trim();
+    try {
+      var original = new URL(raw, sourcePageUrl); original.hash = '';
+      var file = resources[original.href];
+      var queryless = original.origin + original.pathname;
+      if (!file && captchaPaths[queryless]) file = resources[queryless] || null;
+      if (!file) {
+        var name = original.pathname.split('/').pop();
+        file = name && basenameMatches[name] || null;
+      }
+      if (!file && /\.(?:png|jpe?g|gif|webp|avif|svg|ico)$/i.test(original.pathname)) {
+        var imageName = original.pathname.split('/').pop() || '';
+        var imageStem = imageName.replace(/\.[^.]*$/, '').toLowerCase();
+        file = imageStem && imageStemMatches[imageStem] || null;
+      }
+      if (file) return (window.__CLONED_DEPLOYMENT_BASE__ || '') + '/' + file;
+      if (captchaPaths[queryless]) return 'data:,';
+    } catch (_) {}
+    return value;
+  }
+
+  function rewriteCssUrlTokens(input, mapper) {
+  var text = String(input);
+  var output = '';
+  var copied = 0;
+  var index = 0;
+  var length = text.length;
+  function skipString(position, quote) {
+    position += 1;
+    while (position < length) {
+      if (text[position] === '\\') { position += 2; continue; }
+      if (text[position] === quote) return position + 1;
+      position += 1;
+    }
+    return length;
+  }
+  function skipComment(position) {
+    var end = text.indexOf('*/', position + 2);
+    return end < 0 ? length : end + 2;
+  }
+  while (index < length) {
+    var character = text[index];
+    if (character === '/' && text[index + 1] === '*') { index = skipComment(index); continue; }
+    if (character === '"' || character === "'") { index = skipString(index, character); continue; }
+    var boundaryBefore = index === 0 || !/[a-z0-9_-]/i.test(text[index - 1]);
+    if (!boundaryBefore || text.slice(index, index + 3).toLowerCase() !== 'url') { index += 1; continue; }
+    var cursor = index + 3;
+    while (cursor < length && /\s/.test(text[cursor])) cursor += 1;
+    if (text[cursor] !== '(') { index += 3; continue; }
+    cursor += 1;
+    while (cursor < length && /\s/.test(text[cursor])) cursor += 1;
+    var valueStart = cursor;
+    var valueEnd;
+    var close;
+    var quote = text[cursor] === '"' || text[cursor] === "'" ? text[cursor] : '';
+    if (quote) {
+      valueStart = cursor + 1;
+      cursor = skipString(cursor, quote);
+      if (cursor > length || text[cursor - 1] !== quote) { index = length; continue; }
+      valueEnd = cursor - 1;
+      while (cursor < length && /\s/.test(text[cursor])) cursor += 1;
+      if (text[cursor] !== ')') { index = cursor; continue; }
+      close = cursor;
+    } else {
+      var depth = 1;
+      while (cursor < length) {
+        character = text[cursor];
+        if (character === '\\') { cursor += 2; continue; }
+        if (character === '/' && text[cursor + 1] === '*') { cursor = skipComment(cursor); continue; }
+        if (character === '"' || character === "'") { cursor = skipString(cursor, character); continue; }
+        if (character === '(') depth += 1;
+        else if (character === ')' && --depth === 0) break;
+        cursor += 1;
+      }
+      if (cursor >= length) { index = length; continue; }
+      close = cursor;
+      valueEnd = close;
+      while (valueEnd > valueStart && /\s/.test(text[valueEnd - 1])) valueEnd -= 1;
+    }
+    var original = text.slice(valueStart, valueEnd);
+    var replacement = mapper(original, {
+      start: index,
+      end: close + 1,
+      valueStart: valueStart,
+      valueEnd: valueEnd,
+      quote: quote,
+      token: text.slice(index, close + 1)
+    });
+    if (typeof replacement === 'string' && replacement !== original) {
+      output += text.slice(copied, valueStart) + replacement;
+      copied = valueEnd;
+    }
+    index = close + 1;
+  }
+  return copied ? output + text.slice(copied) : text;
+}
+  function rewriteCssImportTokens(input, mapper) {
+  var text = String(input);
+  var output = '';
+  var copied = 0;
+  var index = 0;
+  var length = text.length;
+  function skipString(position, quote) {
+    position += 1;
+    while (position < length) {
+      if (text[position] === '\\') { position += 2; continue; }
+      if (text[position] === quote) return position + 1;
+      position += 1;
+    }
+    return length;
+  }
+  while (index < length) {
+    if (text[index] === '/' && text[index + 1] === '*') {
+      var commentEnd = text.indexOf('*/', index + 2);
+      index = commentEnd < 0 ? length : commentEnd + 2;
+      continue;
+    }
+    if (text[index] === '"' || text[index] === "'") { index = skipString(index, text[index]); continue; }
+    if (text.slice(index, index + 7).toLowerCase() !== '@import' || /[a-z0-9_-]/i.test(text[index + 7] || '')) { index += 1; continue; }
+    var cursor = index + 7;
+    while (cursor < length && /\s/.test(text[cursor])) cursor += 1;
+    var quote = text[cursor];
+    if (quote !== '"' && quote !== "'") { index = cursor; continue; }
+    var valueStart = cursor + 1;
+    cursor = skipString(cursor, quote);
+    if (cursor > length || text[cursor - 1] !== quote) { index = length; continue; }
+    var valueEnd = cursor - 1;
+    var original = text.slice(valueStart, valueEnd);
+    var replacement = mapper(original, { start: index, valueStart: valueStart, valueEnd: valueEnd, quote: quote });
+    if (typeof replacement === 'string' && replacement !== original) {
+      output += text.slice(copied, valueStart) + replacement;
+      copied = valueEnd;
+    }
+    index = cursor;
+  }
+  return copied ? output + text.slice(copied) : text;
+}
+
+  function resolveCss(value) {
+    if (typeof value !== 'string') return value;
+    function rewrite(raw) {
+      var resolved = normalizeAssetPath(raw.trim());
+      return resolved === raw.trim() ? raw : resolved;
+    }
+    return rewriteCssImportTokens(rewriteCssUrlTokens(value, rewrite), rewrite);
+  }
+
+  function resolveMarkup(value) {
+    if (typeof value !== 'string' || !value) return value;
+    var output = value.replace(/\b(src|href|poster|data)=(["'])(.*?)\2/gi, function(match, attribute, quote, raw) {
+      var resolved = normalizeAssetPath(raw);
+      return attribute + '=' + quote + resolved + quote;
+    });
+    output = output.replace(/\b(srcset|imagesrcset)=(["'])(.*?)\2/gi, function(match, attribute, quote, raw) {
+      var candidates = raw.split(',').map(function(candidate) {
+        var parts = candidate.trim().split(/\s+/);
+        parts[0] = normalizeAssetPath(parts[0]);
+        return parts.join(' ');
+      });
+      return attribute + '=' + quote + candidates.join(', ') + quote;
+    });
+    return output.replace(/\bstyle=(["'])(.*?)\1/gi, function(match, quote, raw) {
+      return 'style=' + quote + resolveCss(raw) + quote;
+    });
+  }
+
+  [['innerHTML', 'set'], ['outerHTML', 'set']].forEach(function(entry) {
+    var descriptor = Object.getOwnPropertyDescriptor(Element.prototype, entry[0]);
+    if (!descriptor || !descriptor.set || !descriptor.get) return;
+    Object.defineProperty(Element.prototype, entry[0], {
+      configurable: true,
+      enumerable: descriptor.enumerable,
+      get: descriptor.get,
+      set: function(value) { return descriptor.set.call(this, resolveMarkup(value)); }
+    });
+  });
+  var insertAdjacentHTML = Element.prototype.insertAdjacentHTML;
+  if (insertAdjacentHTML) Element.prototype.insertAdjacentHTML = function(position, value) {
+    return insertAdjacentHTML.call(this, position, resolveMarkup(value));
+  };
+
+  var setAttribute = Element.prototype.setAttribute;
+  Element.prototype.setAttribute = function (name, value) {
+    var attribute = String(name).toLowerCase();
+    if (attribute === 'src' || attribute === 'href' || attribute === 'poster' || attribute === 'data') value = normalizeAssetPath(value);
+    if (attribute === 'style') value = resolveCss(value);
+    return setAttribute.call(this, name, value);
+  };
+
+  [['HTMLImageElement', 'src'], ['HTMLScriptElement', 'src'], ['HTMLLinkElement', 'href'], ['HTMLSourceElement', 'src'], ['HTMLVideoElement', 'poster'], ['HTMLAudioElement', 'src']].forEach(function (entry) {
+    var Type = window[entry[0]];
+    if (!Type) return;
+    var descriptor = Object.getOwnPropertyDescriptor(Type.prototype, entry[1]);
+    if (!descriptor || !descriptor.set || !descriptor.get) return;
+    Object.defineProperty(Type.prototype, entry[1], {
+      configurable: true,
+      enumerable: descriptor.enumerable,
+      get: descriptor.get,
+      set: function (value) { return descriptor.set.call(this, normalizeAssetPath(value)); }
+    });
+  });
+
+  var originalFetch = window.fetch && window.fetch.bind(window);
+  if (originalFetch) window.fetch = function (input, init) {
+    if (typeof input === 'string') input = normalizeAssetPath(input);
+    else if (input && input.url) input = new Request(normalizeAssetPath(input.url), input);
+    return originalFetch(input, init);
+  };
+
+  var open = XMLHttpRequest.prototype.open;
+  XMLHttpRequest.prototype.open = function (method, url) {
+    arguments[1] = normalizeAssetPath(url);
+    return open.apply(this, arguments);
+  };
+
+  var setProperty = CSSStyleDeclaration.prototype.setProperty;
+  CSSStyleDeclaration.prototype.setProperty = function (name, value, priority) {
+    return setProperty.call(this, name, resolveCss(value), priority);
+  };
+})();
+</script><script>
+window.__CLONED_API_CACHE__ = [];
+(function(){
+  var cache = window.__CLONED_API_CACHE__ || [];
+  var sourcePageUrl = "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt";
+  var originalFetch = window.fetch ? window.fetch.bind(window) : null;
+  function identity(url, base) {
+    try {
+      var parsed = new URL(String(url), base || location.href);
+      parsed.hash = '';
+      return parsed.pathname + parsed.search;
+    } catch (_) { return ''; }
+  }
+  function requestIdentities(url) {
+    var identities = [];
+    function add(value) { if (value && identities.indexOf(value) === -1) identities.push(value); }
+    add(identity(url, sourcePageUrl || location.href));
+    var local = identity(url, location.href);
+    add(local);
+    try {
+      var parsed = new URL(String(url), location.href);
+      var deployment = (window.__CLONED_DEPLOYMENT_BASE__ || '').replace(/\/+$/, '');
+      if (deployment && (parsed.pathname === deployment || parsed.pathname.indexOf(deployment + '/') === 0)) {
+        add((parsed.pathname.slice(deployment.length) || '/') + parsed.search);
+      }
+    } catch (_) {}
+    return identities;
+  }
+  function itemIdentities(item) {
+    var identities = [];
+    function add(value) { if (value && identities.indexOf(value) === -1) identities.push(value); }
+    add(identity(item.url, sourcePageUrl || location.href));
+    if (item.pathname) {
+      var search = '';
+      try { search = new URL(item.url, sourcePageUrl || location.href).search; } catch (_) {}
+      add(item.pathname + search);
+    }
+    if (item.file) {
+      var deployment = (window.__CLONED_DEPLOYMENT_BASE__ || '').replace(/\/+$/, '');
+      add((deployment || '') + '/' + String(item.file).replace(/^\/+/, ''));
+    }
+    return identities;
+  }
+  function find(url, method) {
+    var requestMethod = String(method || 'GET').toUpperCase();
+    var requested = requestIdentities(url);
+    var exact = cache.find(function(item) {
+      if (String(item.method || 'GET').toUpperCase() !== requestMethod) return false;
+      var captured = itemIdentities(item);
+      return requested.some(function(value) { return captured.indexOf(value) !== -1; });
+    });
+    if (exact) return exact;
+    var requestedPaths = requested.map(function(value) { try { return new URL(value, location.origin).pathname; } catch (_) { return ''; } });
+    var fallbacks = cache.filter(function(item) {
+      return item.staticFallback && String(item.method || 'GET').toUpperCase() === requestMethod && requestedPaths.indexOf(item.pathname) !== -1;
+    });
+    return fallbacks.length === 1 ? fallbacks[0] : undefined;
+  }
+  window.__CLONED_FIND_API__ = find;
+  function replayPayload(item) {
+    if (!item || typeof item !== 'object' || Array.isArray(item)) throw new TypeError('Invalid replay entry');
+    var bytes = item.encoding === 'base64'
+      ? Uint8Array.from(atob(String(item.body == null ? '' : item.body)), function(c) { return c.charCodeAt(0); })
+      : new TextEncoder().encode(String(item.body == null ? '' : item.body));
+    var charset = 'utf-8';
+    var match = String(item.contentType || item.headers && item.headers['content-type'] || '').match(/charset\s*=\s*["']?([^;"'\s]+)/i);
+    if (match) charset = match[1];
+    var text;
+    if (item.encoding !== 'base64') text = String(item.body == null ? '' : item.body);
+    else {
+      try { text = new TextDecoder(charset).decode(bytes); }
+      catch (_) { text = new TextDecoder('utf-8').decode(bytes); }
+    }
+    var headers = Object.assign({}, item.headers || {});
+    var contentTypeName = Object.keys(headers).find(function(name) { return name.toLowerCase() === 'content-type'; });
+    if (!contentTypeName && item.contentType) {
+      headers['content-type'] = item.contentType;
+      contentTypeName = 'content-type';
+    }
+    return {
+      bytes: bytes,
+      text: text,
+      headers: headers,
+      status: typeof item.status === 'number' ? item.status : 200,
+      statusText: item.statusText == null ? '' : String(item.statusText),
+      contentType: item.contentType || contentTypeName && headers[contentTypeName] || ''
+    };
+  }
+  function makeResponse(item) {
+    var payload = replayPayload(item);
+    return new Response(payload.bytes, { status: payload.status, statusText: payload.statusText, headers: payload.headers });
+  }
+  function responseHeaders(payload) {
+    return Object.keys(payload.headers).map(function(name) { return name + ': ' + payload.headers[name]; }).join('\r\n');
+  }
+  function responseValue(payload, responseType) {
+    var type = String(responseType || '').toLowerCase();
+    if (!type || type === 'text') return payload.text;
+    if (type === 'json') { try { return JSON.parse(payload.text); } catch (_) { return null; } }
+    if (type === 'arraybuffer') return payload.bytes.buffer.slice(payload.bytes.byteOffset, payload.bytes.byteOffset + payload.bytes.byteLength);
+    if (type === 'blob') return new Blob([payload.bytes], { type: payload.contentType });
+    if (type === 'document') {
+      try { return new DOMParser().parseFromString(payload.text, /xml/i.test(payload.contentType) ? 'application/xml' : 'text/html'); }
+      catch (_) { return null; }
+    }
+    return payload.text;
+  }
+  function bytesToBase64(bytes) {
+    var binary = '';
+    for (var offset = 0; offset < bytes.length; offset += 32768) {
+      binary += String.fromCharCode.apply(null, bytes.subarray(offset, offset + 32768));
+    }
+    return btoa(binary);
+  }
+  function customDocumentUrl() {
+    var deployment = (window.__CLONED_DEPLOYMENT_BASE__ || '').replace(/\/+$/, '');
+    var url = new URL((deployment || '') + '/custom/document.pdf', location.origin);
+    url.searchParams.set('__clone_pdf', Date.now().toString());
+    return url.href;
+  }
+  function markViewDocumentReplayed() {
+    window.__CLONED_VIEW_DOCUMENT_REPLAYED__ = true;
+    window.dispatchEvent(new Event('cloned:view-document-replayed'));
+  }
+  function resolveItem(item) {
+    if (!originalFetch || !item || item.pathname !== '/backend/api/MyDocuments/ViewDocumentV2') return Promise.resolve(item);
+    return originalFetch(customDocumentUrl(), { cache: 'no-store', headers: { 'cache-control': 'no-cache' } }).then(function(response) {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.arrayBuffer();
+    }).then(function(buffer) {
+      var bytes = new Uint8Array(buffer);
+      if (bytes.length < 5 || String.fromCharCode.apply(null, bytes.subarray(0, 5)) !== '%PDF-') throw new Error('invalid PDF header');
+      var payload = JSON.parse(item.body);
+      var original = payload.data && payload.data.contentList || [];
+      var chunkSize = original.length && original[0].length > 3 ? original[0].length - 3 : 95000;
+      var base64 = bytesToBase64(bytes), originalBase64 = original.slice().sort(function(a, b) { return +a.slice(0, 3) - +b.slice(0, 3); }).map(function(part) { return part.slice(3); }).join('');
+      if (base64 === originalBase64) { markViewDocumentReplayed(); return item; }
+      var chunks = [];
+      for (var offset = 0, index = 0; offset < base64.length; offset += chunkSize, index++) {
+        chunks.push(String(index).padStart(3, '0') + base64.slice(offset, offset + chunkSize));
+      }
+      payload.data.contentList = chunks;
+      markViewDocumentReplayed();
+      return Object.assign({}, item, { body: JSON.stringify(payload), encoding: 'utf8' });
+    }).catch(function(error) {
+      console.warn('Custom document unavailable; using captured PDF:', error.message || error);
+      markViewDocumentReplayed();
+      return item;
+    });
+  }
+  if (originalFetch) {
+    window.fetch = function(input, init) {
+      var url = typeof input === 'string' ? input : input && input.url;
+      var method = init && init.method || input && input.method || 'GET';
+      var item = find(url, method);
+      return item ? resolveItem(item).then(makeResponse) : originalFetch(input, init);
+    };
+  }
+  var NativeXHR = window.XMLHttpRequest;
+  if (NativeXHR) {
+    window.XMLHttpRequest = function() {
+      var xhr = new NativeXHR();
+      var lastUrl = '';
+      var lastMethod = 'GET';
+      var open = xhr.open.bind(xhr);
+      var send = xhr.send.bind(xhr);
+      xhr.open = function(method, url) {
+        lastMethod = method;
+        lastUrl = url;
+        return open.apply(xhr, arguments);
+      };
+      xhr.send = function(body) {
+        var item = find(lastUrl, lastMethod);
+        if (!item) return send.call(xhr, body);
+        resolveItem(item).then(function(resolvedItem) {
+          var payload = replayPayload(resolvedItem);
+          var responseText = payload.text;
+          var response = responseValue(payload, xhr.responseType);
+          var responseUrl;
+          try { responseUrl = new URL(String(lastUrl), location.href).href; } catch (_) { responseUrl = String(lastUrl || ''); }
+          var headerText = responseHeaders(payload);
+          Object.defineProperties(xhr, {
+            readyState: { get: function() { return 4; } }, status: { get: function() { return payload.status; } },
+            statusText: { get: function() { return payload.statusText; } },
+            responseText: { get: function() {
+              if (xhr.responseType && xhr.responseType !== 'text') throw new DOMException('The object is in an invalid state.', 'InvalidStateError');
+              return responseText;
+            } },
+            response: { get: function() { return response; } }, responseURL: { get: function() { return responseUrl; } }
+          });
+          xhr.getAllResponseHeaders = function() { return headerText; };
+          xhr.getResponseHeader = function(name) {
+            var headers = payload.headers;
+            var target = String(name).toLowerCase();
+            var key = Object.keys(headers).find(function(header) { return header.toLowerCase() === target; });
+            return key ? String(headers[key]) : null;
+          };
+          queueMicrotask(function() {
+            xhr.dispatchEvent(new Event('readystatechange'));
+            xhr.dispatchEvent(new ProgressEvent('load', { lengthComputable: true, loaded: payload.bytes.byteLength, total: payload.bytes.byteLength }));
+            xhr.dispatchEvent(new ProgressEvent('loadend', { lengthComputable: true, loaded: payload.bytes.byteLength, total: payload.bytes.byteLength }));
+          });
+        });
+      };
+      return xhr;
+    };
+    window.XMLHttpRequest.prototype = NativeXHR.prototype;
+    Object.assign(window.XMLHttpRequest, NativeXHR);
+  }
+})();
+</script><style>/* DOCUMENT_VIEWPORT_SCROLLBAR_FIX */
+html, body { height: 100% !important; }
+body { margin: 0 !important; }
+</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <title>
+        ترخيص منشأة صناعية | مؤسسة مسلط سعد ساكر الرشيدي التجارية | 451225738
+    </title>
+
+    <link rel="preload" as="style" href="css/build/assets/app-Dq9IadKQ.css"><link rel="stylesheet" href="css/build/assets/app-Dq9IadKQ.css" data-navigate-track="reload">
+    <style id="original-rendered-font-fallback-fix">
+        .font-diam {
+            font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+        }
+    </style>
+</head>
+<body class="font-diam px-6 py-20 text-slate-800">
+    <div class="max-w-5xl mx-auto">
+        <div class="flex items-center justify-between gap-8">
+            <div>
+                <img src="images/mim-logo.png" alt="Ministry of Industry and Mineral Resources" class="h-16">
+            </div>
+            <div class="text-xl font-bold">
+                ترخيص منشأة صناعية
+            </div>
+            <div>
+                <img src="images/vision-2030-top.png" alt="Saudi Vision 2030" class="h-16">
+            </div>
+        </div>
+
+        <div class="mt-6 p-6 rounded-md flex flex-col bg-gray-100 justify-between items-center mb-4">
+            <div class="flex w-full items-center gap-6">
+                <span class="text-lg font-medium">ترخيص صناعي رقم 451225738</span>
+                <span class="bg-red-200 bg-green-200 bg-orange-200 hidden hide d-none"></span>
+                <div class="bg-green-200 px-4 py-1 rounded-md text-green-900">
+                    نشط
+                </div>
+            </div>
+
+            <div class="flex gap-6 mt-4 w-full">
+                <div class="flex gap-4 items-center">
+                    <div class="font-medium">تاريخ الإصدار</div>
+                    <div>16-01-2024</div>
+                </div>
+
+                <div class="flex gap-4 items-center">
+                    <div class="font-medium">تاريخ الانتهاء</div>
+                    <div>30-12-2026</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full mt-6 space-y-12 divide-y">
+            <div class="w-full">
+                <h3 class="text-xl text-teal-500 font-bold mb-2">
+                    بيانات المنشأة الصناعية
+                </h3>
+
+                <div class="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">رمز المنشأة الصناعية</p>
+                            <p class="text-slate-500 font-medium">10014876</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">اسم المنشأة الصناعية</p>
+                            <p class="text-slate-500 font-medium">مؤسسة مسلط سعد ساكر الرشيدي التجارية</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">عنوان المنشأة الصناعية</p>
+                            <p class="text-slate-500 font-medium">جدة</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">حالة المنشأة الصناعية</p>
+                            <div class="bg-green-200 px-4 py-1 rounded-md" style="width: max-content;">
+                                <p class="text-slate-500 font-medium">الإنتاج</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">الرقم الموحد</p>
+                            <p class="text-slate-500 font-medium">7012454901</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full pt-6">
+                <h3 class="text-xl text-teal-500 font-bold mb-2">
+                    بيانات السجل التجاري
+                </h3>
+
+                <div class="mt-6 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">اسم المنشأة في السجل التجاري</p>
+                            <p class="text-slate-500 font-medium">مؤسسة مسلط سعد ساكر الرشيدي التجارية</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">عنوان السجل التجاري</p>
+                            <p class="text-slate-500 font-medium">جدة</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full"></div>
+
+                    <div class="flex flex-col gap-4 w-full"></div>
+                </div>
+
+                <div class="mt-4 w-full grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">رقم السجل التجاري</p>
+                            <p class="text-slate-500 font-medium">4030251324</p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">تاريخ إصدار السجل التجاري</p>
+                            <p class="text-slate-500 font-medium">23-08-1434</p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">نوع السجل التجاري</p>
+
+                            
+                            <p class="text-slate-500 font-medium">
+                                ذات مسؤولية محدودة
+                            </p>
+                        </div>
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">تاريخ إنتهاء السجل التجاري</p>
+                            <p class="text-slate-500 font-medium"></p>
+                        </div>
+                    </div>
+
+                    <div class="flex flex-col gap-4 w-full">
+                        <div class="flex flex-col space-y-2">
+                            <p class="text-lg">رأس المال</p>
+                            <p class="text-slate-500 font-medium">
+                                                                    50,000  ريال سعودي
+                                                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-full pt-6">
+                <h3 class="text-xl text-teal-500 font-bold mb-2">
+                    قائمة الأنشطة الإقتصادية المرخصة
+                </h3>
+
+                <table class="mt-6 rounded-md shadow min-w-full divide-y divide-gray-300">
+                    <thead class="bg-gray-50">
+                        <tr>
+                            <th scope="col" class="py-3.5 pl-4 pr-3 text-center text-sm sm:pl-3">
+                                رمز النشاط
+                            </th>
+                            <th scope="col" class="px-3 py-3.5 text-center text-sm">
+                                مسمى النشاط
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white">
+                                                    <tr class="even:bg-gray-50">
+                                <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3 text-center">
+                                    162970
+                                </td>
+                                <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                    تجهيز وتصنيع الفلين الطبيعي ، ومنتجات الفلين ، يشمل (صفائح وألواح وبلاط مصنوع من الفلين والفلين المكتل ، ... الخ)
+                                </td>
+                            </tr>
+                                            </tbody>
+                </table>
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                            <div class="w-full pt-6">
+                    <h3 class="text-xl text-teal-500 font-bold mb-2">
+                        قائمة المنتجات
+                    </h3>
+
+                    <table class="mt-6 rounded-md shadow min-w-full divide-y divide-gray-300">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-center text-sm sm:pl-3">
+                                    جميع بنود الـ HS
+                                </th>
+                                <th scope="col" class="py-3.5 pl-4 pr-3 text-center text-sm sm:pl-3">
+                                    البند الجمركي
+                                </th>
+                                <th scope="col" class="px-3 py-3.5 text-center text-sm">
+                                    اسم المنتج
+                                </th>
+                                <th scope="col" class="px-3 py-3.5 text-center text-sm">
+                                    النشاط الصناعي
+                                </th>
+                                <th scope="col" class="px-3 py-3.5 text-center text-sm">
+                                    الطاقة الإنتاجيةالتصميمية القصوى سنوياً
+                                </th>
+                                <th scope="col" class="px-3 py-3.5 text-center text-sm">
+                                    وحدة القياس
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white">
+                                                            <tr class="even:bg-gray-50">
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3 text-center">
+                                        450200100005
+                                    </td>
+                                    <td class="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-gray-900 sm:pl-3 text-center">
+                                        450200100005
+                                    </td>
+                                    <td class="whitespace-nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                        فلين طبيعي مربع بصورة بسيطة بشكل الواح
+                                    </td>
+                                    <td class="whitespace nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                        تجهيز وتصنيع الفلين الطبيعي ، ومنتجات الفلين ، يشمل (صفائح وألواح وبلاط مصنوع من الفلين والفلين المكتل ، ... الخ)
+                                    </td>
+                                    <td class="whitespace nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                        400
+                                    </td>
+                                    <td class="whitespace nowrap px-3 py-4 text-sm text-gray-500 text-center">
+                                        طن
+                                    </td>
+                                </tr>
+                                                    </tbody>
+                    </table>
+                </div>
+                     </div>
+
+        <div class="mt-8 pt-8 flex w-full border-t border-slate-400 items-center justify-center px-4">
+            <img src="images/senaei.jpg" alt="Senaei" class="w-36">
+        </div>
+    </div>
+
+
+</body></html>

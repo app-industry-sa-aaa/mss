@@ -1,0 +1,61 @@
+[2026-08-30T11:07:36.087Z] Starting Website Cloner Pro {"targetUrl":"https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt","outDir":"C:\\Users\\mahmo\\Desktop\\react-cloner-pro-v5-clean\\output","maxPages":100}
+[2026-08-30T11:07:36.965Z] Saved file {"file":"assets/favicon.ico","bytes":184263}
+[2026-08-30T11:07:36.966Z] Downloaded special file {"url":"https://app.industry.sa/favicon.ico","dest":"assets/favicon.ico"}
+[2026-08-30T11:07:38.961Z] Crawling page {"url":"https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt","depth":0}
+[2026-08-30T11:07:41.689Z] Saved file {"file":"images/mim-logo.png","bytes":35034}
+[2026-08-30T11:07:41.805Z] Saved file {"file":"css/build/assets/app-Dq9IadKQ.css","bytes":44177}
+[2026-08-30T11:07:41.821Z] Saved file {"file":"images/senaei.jpg","bytes":73934}
+[2026-08-30T11:07:41.827Z] Saved file {"file":"images/vision-2030-top.png","bytes":71031}
+[2026-08-30T11:07:41.940Z] Browser console {"type":"error","text":"Access to font at 'https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2' from origin 'https://app.industry.sa' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."}
+[2026-08-30T11:07:41.943Z] ERROR Request failed {"url":"https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2","method":"GET","type":"font","failure":{"errorText":"net::ERR_FAILED"}}
+[2026-08-30T11:07:41.951Z] Browser console {"type":"error","text":"Failed to load resource: net::ERR_FAILED"}
+[2026-08-30T11:07:42.070Z] Browser console {"type":"error","text":"Access to font at 'https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff' from origin 'https://app.industry.sa' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."}
+[2026-08-30T11:07:42.073Z] ERROR Request failed {"url":"https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff","method":"GET","type":"font","failure":{"errorText":"net::ERR_FAILED"}}
+[2026-08-30T11:07:42.075Z] Browser console {"type":"error","text":"Failed to load resource: net::ERR_FAILED"}
+[2026-08-30T11:07:42.202Z] Browser console {"type":"error","text":"Access to font at 'https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf' from origin 'https://app.industry.sa' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."}
+[2026-08-30T11:07:42.203Z] ERROR Request failed {"url":"https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf","method":"GET","type":"font","failure":{"errorText":"net::ERR_FAILED"}}
+[2026-08-30T11:07:42.206Z] Browser console {"type":"error","text":"Failed to load resource: net::ERR_FAILED"}
+[2026-08-30T11:07:42.708Z] Auto scrolling page
+[2026-08-30T11:07:43.136Z] Expanding interactive content
+[2026-08-30T11:07:43.169Z] Interaction pass complete {"pass":1,"clicked":0}
+[2026-08-30T11:07:44.085Z] Auto scrolling page
+[2026-08-30T11:07:45.818Z] Browser console {"type":"error","text":"Access to font at 'https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2' from origin 'https://app.industry.sa' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."}
+[2026-08-30T11:07:45.821Z] ERROR Request failed {"url":"https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2","method":"GET","type":"font","failure":{"errorText":"net::ERR_FAILED"}}
+[2026-08-30T11:07:45.823Z] Browser console {"type":"error","text":"Failed to load resource: net::ERR_FAILED"}
+[2026-08-30T11:07:45.953Z] Browser console {"type":"error","text":"Access to font at 'https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff' from origin 'https://app.industry.sa' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."}
+[2026-08-30T11:07:45.955Z] ERROR Request failed {"url":"https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff","method":"GET","type":"font","failure":{"errorText":"net::ERR_FAILED"}}
+[2026-08-30T11:07:45.957Z] Browser console {"type":"error","text":"Failed to load resource: net::ERR_FAILED"}
+[2026-08-30T11:07:46.086Z] Browser console {"type":"error","text":"Access to font at 'https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf' from origin 'https://app.industry.sa' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource."}
+[2026-08-30T11:07:46.087Z] ERROR Request failed {"url":"https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf","method":"GET","type":"font","failure":{"errorText":"net::ERR_FAILED"}}
+[2026-08-30T11:07:46.088Z] Browser console {"type":"error","text":"Failed to load resource: net::ERR_FAILED"}
+[2026-08-30T11:07:46.596Z] Auto scrolling page
+[2026-08-30T11:07:47.807Z] Expanding interactive content
+[2026-08-30T11:07:47.812Z] Interaction pass complete {"pass":1,"clicked":0}
+[2026-08-30T11:07:48.727Z] Auto scrolling page
+[2026-08-30T11:07:51.137Z] Saved file {"file":"images/build/assets/pdf-arrow-DmuYqOWx.png","bytes":273}
+[2026-08-30T11:07:51.186Z] Saved file {"file":"images/build/assets/shape_icon-Cj8PgXzG.png","bytes":587}
+[2026-08-30T11:07:51.388Z] Saved file {"file":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot","bytes":178566}
+[2026-08-30T11:07:51.535Z] Saved file {"file":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE--6580abdf51554bc2.eot","bytes":178566}
+[2026-08-30T11:07:51.597Z] Saved file {"file":"fonts/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2","bytes":48160}
+[2026-08-30T11:07:51.663Z] Saved file {"file":"fonts/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff","bytes":68380}
+[2026-08-30T11:07:51.792Z] Saved file {"file":"fonts/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf","bytes":178108}
+[2026-08-30T11:07:51.932Z] Saved file {"file":"images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg","bytes":202317}
+[2026-08-30T11:07:52.029Z] Saved file {"file":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot","bytes":30264}
+[2026-08-30T11:07:52.085Z] Saved file {"file":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O--c871912b909960d4.eot","bytes":30264}
+[2026-08-30T11:07:52.139Z] Saved file {"file":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2","bytes":10288}
+[2026-08-30T11:07:52.233Z] Saved file {"file":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff","bytes":14460}
+[2026-08-30T11:07:52.369Z] Saved file {"file":"fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf","bytes":30012}
+[2026-08-30T11:07:52.459Z] Saved file {"file":"images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg","bytes":69193}
+[2026-08-30T11:07:52.565Z] Saved file {"file":"fonts/build/assets/LyonArabicText-Black-584mqkp0.woff2","bytes":104096}
+[2026-08-30T11:07:52.686Z] Saved file {"file":"fonts/build/assets/LyonArabicText-Black-CapuXlqb.woff","bytes":154756}
+[2026-08-30T11:07:52.775Z] Saved file {"file":"fonts/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2","bytes":103452}
+[2026-08-30T11:07:52.889Z] Saved file {"file":"fonts/build/assets/LyonArabicText-Regular-BXA-EN7n.woff","bytes":153572}
+[2026-08-30T11:07:52.970Z] Saved file {"file":"fonts/build/assets/LyonArabicText-Semibold-VXt817sT.woff2","bytes":109152}
+[2026-08-30T11:07:53.085Z] Saved file {"file":"fonts/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff","bytes":161704}
+[2026-08-30T11:07:53.097Z] No ViewDocumentV2 response captured; custom document extraction skipped
+[2026-08-30T11:07:53.121Z] Saved file {"file":"css/build/assets/app-Dq9IadKQ.css","bytes":44439}
+[2026-08-30T11:07:53.140Z] Saved file {"file":"license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html","bytes":44120}
+[2026-08-30T11:07:53.148Z] Saved file {"file":"index.html","bytes":44080}
+[2026-08-30T11:07:53.155Z] Saved file {"file":"clone-report.html","bytes":2824}
+[2026-08-30T11:07:53.190Z] Export verification passed
+[2026-08-30T11:07:53.270Z] Clone complete {"outDir":"C:\\Users\\mahmo\\Desktop\\react-cloner-pro-v5-clean\\output","pages":1,"files":28}

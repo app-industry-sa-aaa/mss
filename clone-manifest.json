@@ -1,0 +1,426 @@
+{
+  "targetUrl": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+  "savedAt": "2026-08-30T11:07:53.191Z",
+  "pages": [
+    {
+      "url": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "file": "license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html",
+      "depth": 0,
+      "linksFound": 0
+    }
+  ],
+  "networkRequests": [
+    {
+      "url": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "method": "GET",
+      "type": "document",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:38.979Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/app-Dq9IadKQ.css",
+      "method": "GET",
+      "type": "stylesheet",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:41.472Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/images/mim-logo.png",
+      "method": "GET",
+      "type": "image",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:41.472Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/images/vision-2030-top.png",
+      "method": "GET",
+      "type": "image",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:41.472Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/images/senaei.jpg",
+      "method": "GET",
+      "type": "image",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:41.473Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2",
+      "method": "GET",
+      "type": "font",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:41.794Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff",
+      "method": "GET",
+      "type": "font",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:41.942Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf",
+      "method": "GET",
+      "type": "font",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:42.073Z"
+    },
+    {
+      "url": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "method": "GET",
+      "type": "document",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.507Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/app-Dq9IadKQ.css",
+      "method": "GET",
+      "type": "stylesheet",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.685Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/images/mim-logo.png",
+      "method": "GET",
+      "type": "image",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.687Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/images/vision-2030-top.png",
+      "method": "GET",
+      "type": "image",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.692Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/images/senaei.jpg",
+      "method": "GET",
+      "type": "image",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.693Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2",
+      "method": "GET",
+      "type": "font",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.694Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff",
+      "method": "GET",
+      "type": "font",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.821Z"
+    },
+    {
+      "url": "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf",
+      "method": "GET",
+      "type": "font",
+      "page": "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "capturedAt": "2026-08-30T11:07:45.955Z"
+    }
+  ],
+  "apiEntries": [],
+  "byteIdentityChecks": [],
+  "integrityEntries": [],
+  "viewerDocuments": [],
+  "customDocument": null,
+  "staticDocumentSnapshots": [
+    {
+      "staticDocumentSnapshot": false,
+      "originalRoute": "/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "physicalRoute": "license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html",
+      "localDocumentPath": null,
+      "sourceBootstrapScriptsDisabled": [],
+      "viewerReplacementApplied": false,
+      "preservePhysicalRoute": false,
+      "reason": "route-not-files-portal",
+      "angularNativeDocumentPortalGuard": {
+        "active": false,
+        "reason": "route-not-files-portal",
+        "apiMethod": null
+      }
+    },
+    {
+      "staticDocumentSnapshot": false,
+      "originalRoute": "/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "physicalRoute": "index.html",
+      "localDocumentPath": null,
+      "sourceBootstrapScriptsDisabled": [],
+      "viewerReplacementApplied": false,
+      "preservePhysicalRoute": false,
+      "reason": "route-not-files-portal",
+      "angularNativeDocumentPortalGuard": {
+        "active": false,
+        "reason": "route-not-files-portal",
+        "apiMethod": null
+      }
+    }
+  ],
+  "favicons": [],
+  "renderedControls": [
+    {
+      "file": "license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html",
+      "controls": []
+    },
+    {
+      "file": "index.html",
+      "controls": []
+    }
+  ],
+  "requiresPdfViewer": false,
+  "verification": {
+    "ok": true,
+    "checkedAt": "2026-08-30T11:07:53.190Z",
+    "missing": []
+  },
+  "urlMap": [
+    [
+      "https://app.industry.sa/favicon.ico",
+      "assets/favicon.ico"
+    ],
+    [
+      "https://backoffice.industry.sa/images/mim-logo.png",
+      "images/mim-logo.png"
+    ],
+    [
+      "https://backoffice.industry.sa/images/vision-2030-top.png",
+      "images/vision-2030-top.png"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/app-Dq9IadKQ.css",
+      "css/build/assets/app-Dq9IadKQ.css"
+    ],
+    [
+      "https://backoffice.industry.sa/images/senaei.jpg",
+      "images/senaei.jpg"
+    ],
+    [
+      "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt",
+      "license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html"
+    ],
+    [
+      "https://app.industry.sa/",
+      "index.html"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/pdf-arrow-DmuYqOWx.png",
+      "images/build/assets/pdf-arrow-DmuYqOWx.png"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/shape_icon-Cj8PgXzG.png",
+      "images/build/assets/shape_icon-Cj8PgXzG.png"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot",
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot?",
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE--6580abdf51554bc2.eot"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2",
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff",
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf",
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg",
+      "images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot",
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot?",
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O--c871912b909960d4.eot"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2",
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff",
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf",
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg",
+      "images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Black-584mqkp0.woff2",
+      "fonts/build/assets/LyonArabicText-Black-584mqkp0.woff2"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Black-CapuXlqb.woff",
+      "fonts/build/assets/LyonArabicText-Black-CapuXlqb.woff"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2",
+      "fonts/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Regular-BXA-EN7n.woff",
+      "fonts/build/assets/LyonArabicText-Regular-BXA-EN7n.woff"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Semibold-VXt817sT.woff2",
+      "fonts/build/assets/LyonArabicText-Semibold-VXt817sT.woff2"
+    ],
+    [
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff",
+      "fonts/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff"
+    ]
+  ],
+  "sourceUrls": [
+    [
+      "images/mim-logo.png",
+      "https://backoffice.industry.sa/images/mim-logo.png"
+    ],
+    [
+      "images/vision-2030-top.png",
+      "https://backoffice.industry.sa/images/vision-2030-top.png"
+    ],
+    [
+      "css/build/assets/app-Dq9IadKQ.css",
+      "https://backoffice.industry.sa/build/assets/app-Dq9IadKQ.css"
+    ],
+    [
+      "images/senaei.jpg",
+      "https://backoffice.industry.sa/images/senaei.jpg"
+    ],
+    [
+      "license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html",
+      "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt"
+    ],
+    [
+      "images/build/assets/pdf-arrow-DmuYqOWx.png",
+      "https://backoffice.industry.sa/build/assets/pdf-arrow-DmuYqOWx.png"
+    ],
+    [
+      "images/build/assets/shape_icon-Cj8PgXzG.png",
+      "https://backoffice.industry.sa/build/assets/shape_icon-Cj8PgXzG.png"
+    ],
+    [
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot",
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot"
+    ],
+    [
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE--6580abdf51554bc2.eot",
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot?"
+    ],
+    [
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2",
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2"
+    ],
+    [
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff",
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff"
+    ],
+    [
+      "fonts/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf",
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf"
+    ],
+    [
+      "images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg",
+      "https://backoffice.industry.sa/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg"
+    ],
+    [
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot",
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot"
+    ],
+    [
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O--c871912b909960d4.eot",
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot?"
+    ],
+    [
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2",
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2"
+    ],
+    [
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff",
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff"
+    ],
+    [
+      "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf",
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf"
+    ],
+    [
+      "images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg",
+      "https://backoffice.industry.sa/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg"
+    ],
+    [
+      "fonts/build/assets/LyonArabicText-Black-584mqkp0.woff2",
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Black-584mqkp0.woff2"
+    ],
+    [
+      "fonts/build/assets/LyonArabicText-Black-CapuXlqb.woff",
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Black-CapuXlqb.woff"
+    ],
+    [
+      "fonts/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2",
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2"
+    ],
+    [
+      "fonts/build/assets/LyonArabicText-Regular-BXA-EN7n.woff",
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Regular-BXA-EN7n.woff"
+    ],
+    [
+      "fonts/build/assets/LyonArabicText-Semibold-VXt817sT.woff2",
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Semibold-VXt817sT.woff2"
+    ],
+    [
+      "fonts/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff",
+      "https://backoffice.industry.sa/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff"
+    ],
+    [
+      "index.html",
+      "https://app.industry.sa/license/view/01j5bs3egwdcmzccgpyxns8ytt"
+    ]
+  ],
+  "files": [
+    "assets/favicon.ico",
+    "clone-report.html",
+    "css/build/assets/app-Dq9IadKQ.css",
+    "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BEQHJyTR.woff",
+    "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-BgFwkY9e.ttf",
+    "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-CJefbN2l.woff2",
+    "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O--c871912b909960d4.eot",
+    "fonts/build/assets/02f502e5eefeb353e5f83fc5045348dc-DajcKx0O.eot",
+    "fonts/build/assets/67c4778336d9edd226af9218351835bd-BcdgtRq8.ttf",
+    "fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE--6580abdf51554bc2.eot",
+    "fonts/build/assets/67c4778336d9edd226af9218351835bd-Bh4bRRkE.eot",
+    "fonts/build/assets/67c4778336d9edd226af9218351835bd-C-gDbbhV.woff",
+    "fonts/build/assets/67c4778336d9edd226af9218351835bd-Jq0IlXFw.woff2",
+    "fonts/build/assets/LyonArabicText-Black-584mqkp0.woff2",
+    "fonts/build/assets/LyonArabicText-Black-CapuXlqb.woff",
+    "fonts/build/assets/LyonArabicText-Regular-BXA-EN7n.woff",
+    "fonts/build/assets/LyonArabicText-Regular-Bz51kZSh.woff2",
+    "fonts/build/assets/LyonArabicText-Semibold-Cj-eUayY.woff",
+    "fonts/build/assets/LyonArabicText-Semibold-VXt817sT.woff2",
+    "images/build/assets/02f502e5eefeb353e5f83fc5045348dc-Db369yMt.svg",
+    "images/build/assets/67c4778336d9edd226af9218351835bd-DzkNDvuI.svg",
+    "images/build/assets/pdf-arrow-DmuYqOWx.png",
+    "images/build/assets/shape_icon-Cj8PgXzG.png",
+    "images/mim-logo.png",
+    "images/senaei.jpg",
+    "images/vision-2030-top.png",
+    "index.html",
+    "license/view/01j5bs3egwdcmzccgpyxns8ytt/index.html"
+  ]
+}
